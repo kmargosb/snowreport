@@ -11,13 +11,13 @@ import
 
 const Footer = () => {
     return (
-        <div className='flex w-screen justify-center items-center flex-col'>
+        <div className='flex w-full justify-center items-center flex-col py-10'>
             <div className='flex items-center gap-2'>
                 <FaRegCopyright />
                 <p>SNOWREPORT.es - 2024</p>
             </div>
             <div className='flex flex-col items-center gap-2'>
-                <div className='text-blue-700 flex gap-8'>
+                <div className='text-blue-700 flex gap-8 py-2'>
                     <Link href=''>Contacto</Link>
                     <Link href=''>Avgiso legal</Link>
                     <Link href=''>Política de privacidad</Link>
