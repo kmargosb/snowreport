@@ -10,8 +10,8 @@ const SingOutBtn = () => {
     //Sign out with the Firebase client
     await signOut(auth);
 
-    //Clear the cookies in the server --> 
-    const response = await fetch("http://localhost:3000/api/signOut", {
+    //Clear the cookies in the server --> https://snow-report.netlify.app/
+    const response = await fetch("https://snow-report.netlify.app/api/signOut", {
       method: "POST",
     });
 
