@@ -8,8 +8,8 @@ export async function middleware(request, response) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  //Call the authentication endpoint
-  const responseAPI = await fetch("https://snow-report.netlify.app/api/login", {
+  //Call the authentication endpoint --> https://snow-report.netlify.app/
+  const responseAPI = await fetch("http://localhost:3000/api/login", { 
     headers: {
       Cookie: `session=${session?.value}`,
     },
