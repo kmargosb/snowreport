@@ -7,7 +7,7 @@ import { FaUserCircle, FaRegHeart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-center px-10 py-2'>
+    <nav className='z-10 flex justify-between items-center px-10 py-2'>
       <div>
         <Link href="/" className='flex flex-col justify-center items-center'>
           <Image src={logoPage} alt="Logo" width={50} height={50} />
@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link href='/favorites'>
           <FaRegHeart className='size-6' />
         </Link>
-        <Link href='/login'>
+        <Link href='/profile'>
           <FaUserCircle className='size-6' />
         </Link>
       </div>

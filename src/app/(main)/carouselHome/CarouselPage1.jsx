@@ -12,9 +12,13 @@ import '@/app/globals.css'
 const CarouselPage1 = () => {
 
     const [isClient, setIsClient] = useState(false)
+    const [showContent, setShowContent] = useState(false)
 
     useEffect(() => {
         setIsClient(true)
+        setTimeout(() => {
+            setShowContent(true)
+        }, 1000)
     }, [])
 
     return (
@@ -29,19 +33,19 @@ const CarouselPage1 = () => {
                     muted
                     loop
                 />
-                <div className='flex flex-col items-start gap-6 absolute top-60 left-24'>
-                    <div className='text-white font-semibold'>
-                        <p className=' text-7xl font-outline-2'>Lib Tech</p>
-                        <p>Experimental Dream Boards</p>
-                    </div>
-                    <Link href='https://www.lib-tech.com' className='bg-black text-white py-2 px-4 rounded-md'>
-                        Go shop now
-                    </Link>
-                </div>
+                {showContent &&
+                    <div className='flex flex-col items-start gap-6 absolute top-60 left-24'>
+                        <div className='text-white font-semibold'>
+                            <p className=' text-7xl font-outline-2'>Lib Tech</p>
+                            <p>Experimental Dream Boards</p>
+                        </div>
+                        <Link href='https://www.lib-tech.com' className='bg-black text-white py-2 px-4 rounded-md'>
+                            Go shop now
+                        </Link>
+                    </div>}
             </div>
             :
-            <div className='w-[1280px] h-[500px] relative'>
-                
+            <div className='w-[1280px]'>
             </div>}
         </>
     )

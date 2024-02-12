@@ -1,5 +1,7 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        domains: ['source.unsplash.com'],
+    },
     webpack(config, options) {
         config.module.rules.push({
             test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -18,4 +20,4 @@ const nextConfig = {
     }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
