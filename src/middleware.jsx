@@ -9,7 +9,7 @@ export async function middleware(request, response) {
   }
 
   //Call the authentication endpoint
-  const responseAPI = await fetch("http://localhost:3000/api/login", {
+  const responseAPI = await fetch("https://snow-report.netlify.app/api/login", {
     headers: {
       Cookie: `session=${session?.value}`,
     },
