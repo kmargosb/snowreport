@@ -17,7 +17,7 @@ const Footer = () => {
                 <p>SNOWREPORT.es - 2024</p>
             </div>
             <div className='flex flex-col items-center gap-2'>
-                <div className='text-blue-700 flex gap-8 py-2'>
+                <div className='text-blue-700 flex gap-8 px-2 py-2 max-sm:flex-col max-sm:gap-2'>
                     <Link href=''>Contacto</Link>
                     <Link href=''>Avgiso legal</Link>
                     <Link href=''>Política de privacidad</Link>

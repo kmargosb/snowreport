@@ -2,15 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import CarouselPage1 from './CarouselPage1';
-// import snowboarding1 from '@/../public/snowboarding1.jpg'
-// import snowboarding2 from '@/../public/nsowboarding2.jpg'
-
+import CarouselPage2 from './CarouselPage2';
 
 const Carousel = () => {
 
   const components = [
     <CarouselPage1 />,
-    'hola',
+    <CarouselPage2 />,
     'prueba',
     'otra',
     'mas prueba',

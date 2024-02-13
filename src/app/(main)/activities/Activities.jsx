@@ -1,14 +1,14 @@
 import React from 'react'
 import Cards from './Cards'
-import snowIcon from '../../../../public/snowIcon.png'
-import raquetasIcon from '@/../public/raquetasIcon.png'
-import skiMountain from '@/../public/skiMountain.png'
-import trineo from '@/../public/trineo.png'
+import snowParks from '../../../../public/snowParks.jpg'
+import raquetasNieve from '@/../public/raquetasNieve.jpg'
+import skiMountain from '@/../public/esquiMontana.jpg'
+import trineoNieve from '@/../public/trineoNieve.jpg'
 
 const Activities = () => {
     const info = [
         {
-            img: snowIcon,
+            img: snowParks,
             tittle: 'SNOWPARKS'
         },
         {
@@ -16,16 +16,16 @@ const Activities = () => {
             tittle: 'ESQUI DE MONTANA'
         },
         {
-            img: raquetasIcon,
+            img: raquetasNieve,
             tittle: 'RAQUETAS'
         },
         {
-            img: trineo,
+            img: trineoNieve,
             tittle: 'PISTAS DE TRINEO'
         }
     ]
     return (
-        <div className='w-full flex flex-wrap justify-center gap-6 md:gap-20 py-10'>
+        <div className='w-full flex flex-wrap justify-center gap-6 md:gap-10'>
             {info.map((data, i) => {
                 return <Cards key={i} tittle={data.tittle} img={data.img} />
             })}

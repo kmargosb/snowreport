@@ -1,6 +1,13 @@
 const nextConfig = {
     images: {
-        domains: ['source.unsplash.com'],
+        remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'images.unsplash.com',
+              port: '',
+              pathname: '**',
+            }
+          ],
     },
     webpack(config, options) {
         config.module.rules.push({
