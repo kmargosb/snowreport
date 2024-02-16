@@ -8,7 +8,6 @@ import Data from './Data.jsx'
 const Cards = () => {
 
   const { imgData } = useContext(SnowReportContext)
-  console.log(imgData)
 
   return (
     <>
