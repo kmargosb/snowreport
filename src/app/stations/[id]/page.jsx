@@ -1,8 +1,9 @@
 import React from 'react'
+import { STATION_DB } from '@/app/api/data/data' 
 
 const Station = () => {
   return (
-    <div>
+    <div className='mt-[90px]'>
         <h1>
             Estacion
             <p>country, region</p>

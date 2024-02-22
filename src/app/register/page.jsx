@@ -59,7 +59,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="flex flex-col md:flex-row py-6">
+      <section className="flex flex-col md:flex-row py-6 mt-[95px]">
         <div className="md:shadowAuth rounded-3xl py-12 
       md:max-w-md  md:mx-auto  md:w-1/2 xl:w-1/3 px-6 
       lg:px-16 xl:px-12 flex items-center justify-center">

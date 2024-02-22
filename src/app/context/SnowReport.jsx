@@ -21,25 +21,8 @@ const SnowReportContextProvider = ({ children }) => {
     getData();
   }, []);
 
-  // Data snowreport api
-  const [stationsData, setStationsData] = useState(null)
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/api/stations/');
-        const data = await response.json();
-        console.log(data)
-        setStationsData(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getData();
-  }, []);
-
-
   return (
-    <SnowReportContext.Provider value={{ imgData, stationsData }}>
+    <SnowReportContext.Provider value={{ imgData }}>
       {children}
     </SnowReportContext.Provider>
   )

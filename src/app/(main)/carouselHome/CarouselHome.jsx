@@ -44,7 +44,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className='flex overflow-hidden relative min-h[200px] max-h-[500px] max-w-[1280px]'
+    <div className='flex overflow-hidden relative min-h[200px] max-h-[500px] max-w-[1280px] mt-[90px]'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <button
