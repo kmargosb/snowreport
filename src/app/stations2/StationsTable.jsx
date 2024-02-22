@@ -1,7 +1,11 @@
 'use client'
 
 import React, { useState } from 'react'
-import { BsArrowUp, BsArrowDown, BsSearch } from "react-icons/bs";
+import {
+  BsArrowUp,
+  BsArrowDown,
+  BsSearch
+} from "react-icons/bs";
 import {
   useReactTable,
   getCoreRowModel,
@@ -9,36 +13,33 @@ import {
   getSortedRowModel,
   getFilteredRowModel
 } from '@tanstack/react-table'
-import { STATION_DB } from '@/app/api/data/data'
 import Link from 'next/link';
 
-const data = STATION_DB
-
-const EspanaStation = () => {
-
-  const columns = [
-    {
-      header: "Estación",
-      accessorKey: "station",
-      className: 'max-sm:w-1/4'
-    },
-    {
-      header: "Forfait",
-      accessorKey: "price"
-    },
-    {
-      header: "Nieve",
-      accessorKey: "snow"
-    },
-    {
-      header: "Kilometros",
-      accessorKey: "kilometers"
-    },
-    {
-      header: "Estado",
-      accessorKey: "state"
-    }
-  ]
+const SpainStations = ({ data }) => {
+    
+    const columns = [
+      {
+        header: "Estación",
+        accessorKey: "station",
+        className: 'max-sm:w-1/4'
+      },
+      {
+        header: "Forfait",
+        accessorKey: "price"
+      },
+      {
+        header: "Nieve",
+        accessorKey: "snow"
+      },
+      {
+        header: "Kilometros",
+        accessorKey: "kilometers"
+      },
+      {
+        header: "Estado",
+        accessorKey: "state"
+      }
+    ]
 
   const [sorting, setSorting] = useState([]);
   const [filtering, setFiltering] = useState('')
@@ -96,7 +97,7 @@ const EspanaStation = () => {
               <tr key={row.id}>
                 {row.getVisibleCells().map(cell => (
                   <td className='text-left border-b p-4 max-sm:text-[10px] max-sm:p-1 max-sm:w-1/8'>
-                    <Link href={`stations2/espana/${cell.row.original.id}`}>
+                    <Link href={`stations2/spain/${cell.row.original.id}`}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </Link>
                   </td>
@@ -110,4 +111,4 @@ const EspanaStation = () => {
   )
 }
 
-export default EspanaStation
+export default SpainStations

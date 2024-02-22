@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import PortugalStations from './portugal/page'
-import EspanaStations from './espana/page'
+import SpainStations from './spain/page'
 import AndorraStations from './andorra/page'
-import FranciaStations from './francia/page'
+import FranciaStations from './france/page'
 import Image from 'next/image'
 import spainFlag from '@/../public/spainFlag.png'
 import franceFlag from '@/../public/franceFlag.png'
@@ -32,7 +32,7 @@ const Stations2 = () => {
       <div className={`flex lg:gap-10 md:gap-3  ${selectedCountry === null ? 'max-sm:flex max-sm:flex-col max-sm:gap-6' : ''}`}>
         <button
           className="transform hover:translate-y-1 transition duration-300 flag-container"
-          onClick={() => handleCountrySelection('espana')}>
+          onClick={() => handleCountrySelection('spain')}>
           <Image src={spainFlag} width={200} height={100} />
           <span className="flag-name">España</span>
         </button>
@@ -55,7 +55,7 @@ const Stations2 = () => {
           <span className="flag-name">Francia</span>
         </button>
       </div>
-      {selectedCountry === 'espana' && <EspanaStations />}
+      {selectedCountry === 'spain' && <SpainStations />}
       {selectedCountry === 'portugal' && <PortugalStations />}
       {selectedCountry === 'andorra' && <AndorraStations />}
       {selectedCountry === 'francia' && <FranciaStations />}

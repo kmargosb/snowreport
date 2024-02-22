@@ -42,7 +42,7 @@ const Navbar = () => {
         )}
       </div>
       <div className={`hidden md:flex gap-3 ${scrolled && 'gap-2'}`}>
-        <Link href="/stations" onClick={handleCloseMenu}>
+        <Link href="/stations2" onClick={handleCloseMenu}>
           Estaciones
         </Link>
         <Link href="/weather" onClick={handleCloseMenu}>
