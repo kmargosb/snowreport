@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaUserCircle, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
+import { TbSnowflake } from "react-icons/tb";
 import logoPage from '../../public/logoPage.png';
 
 const Navbar = () => {
@@ -28,36 +29,36 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 z-50 w-full bg-white shadow-md flex justify-between items-center px-10 py-2 transition-all duration-500 ${scrolled && 'py-1'}`}>
+    <nav className={`fixed top-0 z-50 w-full bg-white shadow-md shadow-primary2 flex justify-between items-center px-10 py-2 transition-all  ${scrolled && 'py-1'}`}>
       <div>
         {!scrolled ? (
           <Link href="/" className='flex flex-col justify-center items-center' onClick={handleCloseMenu}>
-            <Image src={logoPage} alt="Logo" width={50} height={50} />
-            <p>SNOWREPORT</p>
+            <TbSnowflake className='size-[50px] text-primary'/>
+            <p className='text-text-secondary3 hover:text-primary2 transition-all duration-00'>SNOW<span className='text-primary font-bold hover:text-primary2 transition-all duration-800'>REPORT</span></p>
           </Link>
         ) : (
           <Link href='/'>
-            <p>SNOWREPORT</p>
+            <p className='text-primary hover:text-primary2 transition-all duration-800'>SNOWREPORT</p>
           </Link>
         )}
       </div>
-      <div className={`hidden md:flex gap-3 ${scrolled && 'gap-2'}`}>
+      <div className={`hidden md:flex gap-3 ${scrolled && 'gap-2'} text-text-secondary3`}>
         <Link href="/stations2" onClick={handleCloseMenu}>
-          Estaciones
+          <p className='hover:text-primary2 transition-all duration-800'>Estaciones</p>
         </Link>
         <Link href="/weather" onClick={handleCloseMenu}>
-          Tiempo
+          <p className='hover:text-primary2 transition-all duration-800'>Tiempo</p>
         </Link>
         <Link href="/blog" onClick={handleCloseMenu}>
-          Blog
+          <p className='hover:text-primary2 transition-all duration-800'>Blog</p>
         </Link>
       </div>
       <div className={`hidden md:flex gap-4 ${scrolled && 'gap-2'}`}>
         <Link href='/favorites' onClick={handleCloseMenu}>
-          <FaRegHeart className='size-6' />
+          <FaRegHeart className='size-6 text-text-secondary3 hover:text-primary2' />
         </Link>
         <Link href='/profile' onClick={handleCloseMenu}>
-          <FaUserCircle className='size-6' />
+          <FaUserCircle className='size-6 text-text-secondary3 hover:text-primary2' />
         </Link>
       </div>
       <div className='md:hidden flex items-center'>

@@ -29,27 +29,27 @@ const Stations2 = () => {
   return (
     
     <div className={`py-[110px] flex flex-col items-center min-h-screen ${selectedCountry === null ? 'justify-center' : ''}`}>
-      <div className={`flex lg:gap-10 md:gap-3  ${selectedCountry === null ? 'max-sm:flex max-sm:flex-col max-sm:gap-6' : ''}`}>
+      <div className={`flex lg:gap-10 md:gap-3  ${selectedCountry === null ? 'max-sm:flex max-sm:flex-col max-sm:gap-6 md:flex-wrap md:px-20 justify-center' : ''}`}>
         <button
-          className="transform hover:translate-y-1 transition duration-300 flag-container"
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
           onClick={() => handleCountrySelection('spain')}>
           <Image src={spainFlag} width={200} height={100} />
           <span className="flag-name">España</span>
         </button>
         <button
-          className="transform hover:translate-y-1 transition duration-300 flag-container"
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
           onClick={() => handleCountrySelection('portugal')}>
           <Image src={portugalFlag} width={200} height={100} />
           <span className="flag-name">Portugal</span>
         </button>
         <button
-          className="transform hover:translate-y-1 transition duration-300 flag-container"
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
           onClick={() => handleCountrySelection('andorra')}>
           <Image src={andorraFlag} width={200} height={100} />
           <span className="flag-name">Andorra</span>
         </button>
         <button
-          className="transform hover:translate-y-1 transition duration-300 flag-container"
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
           onClick={() => handleCountrySelection('francia')}>
           <Image src={franceFlag} width={200} height={100} />
           <span className="flag-name">Francia</span>
