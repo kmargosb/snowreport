@@ -30,6 +30,7 @@ const CarouselPage1 = () => {
                     url={videoCarousel1}
                     controls={false}
                     playing={true}
+                    playsInline
                     muted
                     loop
                 />
