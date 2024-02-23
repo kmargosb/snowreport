@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import CarouselPage1 from './CarouselPage1';
 import CarouselPage2 from './CarouselPage2';
+import { LuChevronRightCircle, LuChevronLeftCircle } from "react-icons/lu";
 
 const Carousel = () => {
 
@@ -44,13 +45,13 @@ const Carousel = () => {
   };
 
   return (
-    <div className='flex overflow-hidden relative min-h[200px] max-h-[500px] max-w-[1280px] mt-[90px]'
+    <div className='flex overflow-hidden relative lg:min-h[200px] lg:max-h-[500px] lg:max-w-[1280px] mt-[90px] max-sm:w-full max-sm:h-full'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <button
         onClick={prevSlide}
-        className='left-5 size-10 absolute top-2/4 translate-y-2/4 border border-white rounded-full cursor-pointer text-2xl z-[1] opacity-25 hover:opacity-50 focus:outline-none transition-all'>
-        &lt;
+        className='max-sm:top-20 left-5 size-10 absolute top-2/4 translate-y-2/4 cursor-pointer text-2xl z-[1] opacity-25 hover:opacity-50 focus:outline-none transition-all'>
+       <LuChevronLeftCircle />
       </button>
       {[...Array(5)].map((_, index) => (
         <div
@@ -64,8 +65,8 @@ const Carousel = () => {
       ))}
       <button
         onClick={nextSlide}
-        className='right-5 size-10 absolute top-2/4 translate-y-2/4 border border-white rounded-full cursor-pointer text-2xl z-[1] opacity-25 hover:opacity-50 focus:outline-none transition-all'>
-        &gt;
+        className='max-sm:top-20 right-1 size-10 absolute top-2/4 translate-y-2/4 cursor-pointer text-2xl z-[1] opacity-25 hover:opacity-50 focus:outline-none transition-all'>
+        <LuChevronRightCircle/>
       </button>
     </div>
   );
