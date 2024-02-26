@@ -32,8 +32,8 @@ const Navbar = () => {
     <nav className={`fixed top-0 z-50 w-full bg-white shadow-md shadow-primary2 flex justify-between items-center px-10 py-2 transition-all  ${scrolled && 'py-1'}`}>
       <div>
         {!scrolled ? (
-          <Link href="/" className='flex flex-col justify-center items-center' onClick={handleCloseMenu}>
-            <TbSnowflake className='size-[50px] text-primary'/>
+          <Link href="/" className='flex flex-col justify-center items-center ' onClick={handleCloseMenu}>
+            <TbSnowflake className='size-[50px] text-primary hover:text-primary2 transition-all duration-800'/>
             <p className='text-text-secondary3 hover:text-primary2 transition-all duration-00'>SNOW<span className='text-primary font-bold hover:text-primary2 transition-all duration-800'>REPORT</span></p>
           </Link>
         ) : (
@@ -69,7 +69,7 @@ const Navbar = () => {
         )}
       </div>
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md shadow-primary2">
           <div className="flex flex-col items-center py-4">
             <Link href="/stations2" className="py-2" onClick={handleCloseMenu}>
               Estaciones
