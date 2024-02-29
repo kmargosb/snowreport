@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useContext } from 'react'
 import StationsTable from '../StationsTable'
 import { SnowReportContext } from '@/app/context/SnowReport'
