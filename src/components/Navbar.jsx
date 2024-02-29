@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaUserCircle, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
 import { TbSnowflake } from "react-icons/tb";
-import logoPage from '../../public/logoPage.png';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +43,7 @@ const Navbar = () => {
         )}
       </div>
       <div className={`hidden md:flex gap-3 ${scrolled && 'gap-2'} text-text-secondary3`}>
-        <Link href="/stations2" onClick={handleCloseMenu}>
+        <Link href="/stations" onClick={handleCloseMenu}>
           <p className='hover:text-primary2 transition-all duration-800'>Estaciones</p>
         </Link>
         <Link href="/weather" onClick={handleCloseMenu}>

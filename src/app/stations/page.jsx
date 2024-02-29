@@ -1,14 +1,10 @@
 import React from 'react'
-import Cards from './Cards'
-import Link from 'next/link'
+import SelectCountry from './SelectCountry'
 
 const Stations = () => {
-
   return (
-    <div>
-      <Cards/>
-    </div>
-  )
+    <SelectCountry/>
+    )
 }
 
 export default Stations

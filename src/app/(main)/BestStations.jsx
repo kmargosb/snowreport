@@ -1,7 +1,5 @@
 import React from 'react'
 import mejoresEstaciones from '@/../public/mejoresEstaciones.jpg'
-import logoPage from '@/../public/logoPage.png'
-import Link from 'next/link'
 import Image from 'next/image'
 
 const BestStations = () => {

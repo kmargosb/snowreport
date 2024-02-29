@@ -14,7 +14,7 @@ async function handleBearerToken(authorization) {
     const decodedToken = await auth().verifyIdToken(idToken);
 
     if (decodedToken) {
-      const expiresIn = 5 * 60 * 1000;
+      const expiresIn = 5 * 90 * 1000;
       const sessionCookie = await auth().createSessionCookie(idToken, {
         expiresIn,
       });
@@ -48,7 +48,8 @@ async function handleEmailAndPassword(email, password) {
       const decodedToken = await auth().verifyIdToken(idToken);
 
       if (decodedToken) {
-        const expiresIn = 5 * 60 * 1000;
+
+        const expiresIn = 5 * 90 * 1000;
         const sessionCookie = await auth().createSessionCookie(idToken, {
           expiresIn,
         });
@@ -61,7 +62,7 @@ async function handleEmailAndPassword(email, password) {
         };
 
         cookies().set(options);
-        return NextResponse.json({ options }, { status: 200 });
+        return NextResponse.json({ user, options }, { status: 200 });
       }
     }
   } catch (error) {

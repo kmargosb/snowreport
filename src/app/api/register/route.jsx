@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../../lib/firebase-config";
+import { auth, db } from "../../../../lib/firebase-config"; // Assuming db is your Firestore instance
 import { NextResponse } from "next/server";
+import { doc, setDoc } from "firebase/firestore";
 
 // Function to register a new user using Firebase Authentication
 export async function registerUser(email, password) {
@@ -13,6 +14,16 @@ export async function registerUser(email, password) {
 
     const user = userCredential.user;
     console.log("User registered:", user);
+
+    // Save user data to Firestore
+    const userId = user.uid;
+    const userName = user.email;
+    const userEmail = user.email;
+
+    await setDoc(doc(db, "users", userId), {
+      name: userName,
+      email: userEmail
+    });
 
     // You can perform additional actions after successful registration, if needed.
 
