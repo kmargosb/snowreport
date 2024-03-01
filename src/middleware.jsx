@@ -26,7 +26,7 @@ export async function middleware(request, response) {
 //Add your protected routes
 export const config = {
   matcher: [
-    "/profile",
-    "/favorites"
+    // "/profile",
+    // "/favorites"
   ],
 };
