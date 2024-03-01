@@ -61,8 +61,6 @@ const PieHalfDonutChart = ({stationDB}) => {
 
     chart.setOption(option);
 
-    console.log(green)
-
     return () => {
       chart.dispose(); // Limpiar al desmontar el componente
     };

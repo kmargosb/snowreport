@@ -14,7 +14,7 @@ const BestStations = () => {
     //   </div>
     // </div>
     <div className='w-full' >
-      <Image src={mejoresEstaciones} alt='best_stations' className='w-full md:h-[400px] object-cover contrast-75' />
+      <Image src={mejoresEstaciones} alt='best_stations' priority className='w-full md:h-[400px] object-cover contrast-75' />
       <div>
       {/* <Image src={logoPage} width={100} height={100} alt="Logo_SNOW" className='' /> */}
       </div>

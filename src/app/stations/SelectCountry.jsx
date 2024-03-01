@@ -25,32 +25,32 @@ const SelectCountry = () => {
   };
 
   return (
-    
+
     <div className={`pt-[110px] flex flex-col gap-10 items-center min-h-screen ${selectedCountry === null ? 'justify-center' : ''}`}>
 
       <div className={`flex lg:gap-10 md:gap-3  ${selectedCountry === null ? 'max-sm:flex max-sm:flex-col max-sm:gap-6 md:flex-wrap md:px-20 justify-center' : ''}`}>
         <button
-          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`}
           onClick={() => handleCountrySelection('ESPAÑA')}>
-          <Image src={spainFlag} width={200} height={100} />
+          <Image src={spainFlag} width={200} priority alt='bandera_españa' />
           <span className="flag-name">España</span>
         </button>
         <button
-          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`}
           onClick={() => handleCountrySelection('PORTUGAL')}>
-          <Image src={portugalFlag} width={200} height={100} />
+          <Image src={portugalFlag} width={200} priority alt='bandera_portugal' />
           <span className="flag-name">Portugal</span>
         </button>
         <button
-          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`}
           onClick={() => handleCountrySelection('ANDORRA')}>
-          <Image src={andorraFlag} width={200} height={100} />
+          <Image src={andorraFlag} width={200} priority alt='bandera_andorra' />
           <span className="flag-name">Andorra</span>
         </button>
         <button
-          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`} 
+          className={`transform hover:translate-y-1 transition duration-300 flag-container ${selectedCountry !== null ? 'max-sm:px-2' : 'md:p-3'}`}
           onClick={() => handleCountrySelection('FRANCIA')}>
-          <Image src={franceFlag} width={200} height={100} />
+          <Image src={franceFlag} width={200} priority alt='bandera_francia' />
           <span className="flag-name">Francia</span>
         </button>
       </div>

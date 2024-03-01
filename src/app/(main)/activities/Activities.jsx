@@ -27,7 +27,7 @@ const Activities = () => {
     return (
         <div className='w-full flex flex-wrap justify-center gap-6 md:gap-10'>
             {info.map((data, i) => {
-                return <Cards key={i} tittle={data.tittle} img={data.img} />
+                return <Cards key={i} tittle={data.tittle} img={data.img}/>
             })}
         </div>
     )

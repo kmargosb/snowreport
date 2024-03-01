@@ -15,8 +15,7 @@ import {
 } from '@tanstack/react-table'
 import Link from 'next/link';
 
-const SpainStations = ({ data, country }) => {
-  console.log(data)
+const StationsTable = ({ data, country }) => {
     
     const columns = [
       {
@@ -73,11 +72,11 @@ const SpainStations = ({ data, country }) => {
       <table className='w-full border-collapse border-spacing-0 '>
         <thead className='bg-blue-300'>
           {
-            table.getHeaderGroups().map(headerGroup => (
-              <tr key={headerGroup.id}>
+            table.getHeaderGroups()?.map((headerGroup, i) => (
+              <tr key={i}>
                 {
-                  headerGroup.headers.map(header => (
-                    <th key={header.id} className='text-left p-4 max-sm:text-[10px] max-sm:p-1 select-none cursor-pointer'
+                  headerGroup.headers?.map((header, i) => (
+                    <th key={i} className='text-left p-4 max-sm:text-[10px] max-sm:p-1 select-none cursor-pointer'
                       onClick={header.column.getToggleSortingHandler()}>
                       {
                         flexRender(header.column.columnDef.header, header.getContext())
@@ -94,9 +93,9 @@ const SpainStations = ({ data, country }) => {
         </thead>
         <tbody>
           {
-            table.getRowModel().rows.map(row => (
-              <tr key={row.info_id}>
-                {row.getVisibleCells().map((cell, i) => (
+            table.getRowModel().rows?.map((row,i) => (
+              <tr key={i}>
+                {row.getVisibleCells()?.map((cell, i) => (
                   <td key={i} className='text-left border-b p-4 max-sm:text-[10px] max-sm:p-1 max-sm:w-1/8'>
                     <Link href={`stations/${country}/${cell.row.original.info_id}`}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -112,4 +111,4 @@ const SpainStations = ({ data, country }) => {
   )
 }
 
-export default SpainStations
+export default StationsTable

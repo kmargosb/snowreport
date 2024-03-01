@@ -1,13 +1,11 @@
-'use client'
 
 import Image from 'next/image'
 import snowboarding1 from '@/../public/snowboarding1.jpg'
 import PieHalfDonutChart from './PieHalfDonutChart'
+import TechnicalSheet from './TechnicalSheet'
+import HowToArrive from './HowToArrive'
 
 const Station = ({ stationDB }) => {
-
-  console.log(stationDB?.estacion)
-  console.log(stationDB?.estacion)
 
   return (
     <div className='flex flex-col w-full py-20'>
@@ -28,6 +26,8 @@ const Station = ({ stationDB }) => {
           </p>
         </div>
       </div>
+
+      <HowToArrive stationDB={stationDB}/>
 
       <div className='w-[1280px] h-[300px] relative mt-20'>
         <Image src={snowboarding1} alt='snow' fill={true} className='object-cover object-bottom' />
@@ -65,7 +65,7 @@ const Station = ({ stationDB }) => {
           <p className='text-primary2'>{stationDB?.negras}/<span className='text-text-secondary3'>20</span></p>
         </div>
       </div>
-
+      <TechnicalSheet stationDB={stationDB} />
     </div>
   )
 }

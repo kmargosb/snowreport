@@ -1,6 +1,6 @@
 import React from 'react'
 import CarouselHome from './carouselHome/CarouselHome';
-import Activities from '../../components/activities/Activities';
+import Activities from './activities/Activities';
 import BestStations from './BestStations';
 
 export default function Home() {
