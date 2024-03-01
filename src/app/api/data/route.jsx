@@ -1,5 +1,5 @@
 
-import mySqlDb from "../../../../lib/victor-db-mysql";
+import mySqlDb from './victor-db-mysql';
 import { NextResponse } from "next/server";
 
 export async function GET() {
