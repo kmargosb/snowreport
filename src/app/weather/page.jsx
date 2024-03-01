@@ -15,9 +15,9 @@ const Weather = () => {
         if (!coordinates) return;
         const { longitud: longitude, latitud: latitude } = coordinates;
         const apiKey = 'aefa98ee63403acca6298ea6a8e43e35';
-        const urlWeather = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
-        const urlForecast = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
-        const urlZipCode = `http:api.openweathermap.org/data/2.5/forecast?zip=66760,us&appid=${apiKey}`
+        const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+        const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+        const urlZipCode = `https:api.openweathermap.org/data/2.5/forecast?zip=66760,us&appid=${apiKey}`
         
         const response = await fetch(urlWeather);
         const data = await response.json();
