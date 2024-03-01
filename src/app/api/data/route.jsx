@@ -1,29 +1,5 @@
-// import mySqlDb from "./VictorDb";
-// import { NextResponse } from "next/server";
 
-// export async function GET() {
-//     try {
-//         const results = await new Promise((resolve, reject) => {
-//             mySqlDb.query('SELECT * FROM nieve', (error, results) => {
-//                 if (error) {
-//                     reject(error);
-//                 } else {
-//                     resolve(results);
-//                 }
-//             });
-//         });
-//         console.log(results);
-//         return NextResponse.json(results)
-
-//     } catch (error) {
-//         return NextResponse.json(
-//             {message : error},
-//             { status : 500}
-//         )
-//     }
-// }
-
-import mySqlDb from "./VictorDb";
+import mySqlDb from "../../../../lib/victor-db-mysql";
 import { NextResponse } from "next/server";
 
 export async function GET() {
