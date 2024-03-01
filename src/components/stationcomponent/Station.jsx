@@ -3,7 +3,7 @@ import Image from 'next/image'
 import snowboarding1 from '@/../public/snowboarding1.jpg'
 import PieHalfDonutChart from './PieHalfDonutChart'
 import TechnicalSheet from './TechnicalSheet'
-import HowToArrive from './HowToArrive'
+import HowToGetThere from './HowToGetThere'
 
 const Station = ({ stationDB }) => {
 
@@ -27,7 +27,7 @@ const Station = ({ stationDB }) => {
         </div>
       </div>
 
-      <HowToArrive stationDB={stationDB}/>
+      <HowToGetThere stationDB={stationDB}/>
 
       <div className='w-[1280px] h-[300px] relative mt-20'>
         <Image src={snowboarding1} alt='snow' fill={true} className='object-cover object-bottom' />

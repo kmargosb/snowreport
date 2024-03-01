@@ -3,7 +3,7 @@
 import { SnowReportContext } from "@/app/context/SnowReport";
 import { useContext } from "react";
 
-const HowToArrive = ({ stationDB }) => {
+const HowToGetThere = ({ stationDB }) => {
 
     
     const { coordinates } = useContext(SnowReportContext);
@@ -28,4 +28,4 @@ const HowToArrive = ({ stationDB }) => {
     )
 }
 
-export default HowToArrive
+export default HowToGetThere

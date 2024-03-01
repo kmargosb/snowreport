@@ -39,7 +39,7 @@ export async function GET() {
         });
         console.log(results);
         // connection.end();
-        return NextResponse.json(results)
+        return (NextResponse.json(results))
 
     } catch (error) {
         return NextResponse.json(

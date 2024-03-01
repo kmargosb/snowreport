@@ -55,6 +55,7 @@ const SnowReportContextProvider = ({ children }) => {
     };
     obtenerCoordenadas()
   }, [])
+  
 
   return (
     <SnowReportContext.Provider

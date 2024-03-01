@@ -4,6 +4,7 @@ import snowParks from '@/../public/snowParks.jpg'
 import raquetasNieve from '@/../public/raquetasNieve.jpg'
 import skiMountain from '@/../public/esquiMontana.jpg'
 import trineoNieve from '@/../public/trineoNieve.jpg'
+import Link from 'next/link'
 
 const Activities = () => {
     const info = [
@@ -27,7 +28,11 @@ const Activities = () => {
     return (
         <div className='w-full flex flex-wrap justify-center gap-6 md:gap-10'>
             {info.map((data, i) => {
-                return <Cards key={i} tittle={data.tittle} img={data.img}/>
+                return (
+                    <Link href="/activitiestable">
+                        <Cards key={i} tittle={data.tittle} img={data.img} />
+                    </Link>
+                )
             })}
         </div>
     )
