@@ -55,6 +55,40 @@ const SnowReportContextProvider = ({ children }) => {
     };
     obtenerCoordenadas()
   }, [])
+
+  // Weather Data
+
+  const [dataWeather, setDataWeather] = useState(null)
+  const [dataForecast, setDataForecast] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (!coordinates) return;
+        const { longitud: longitude, latitud: latitude } = coordinates;
+        const apiKey = 'aefa98ee63403acca6298ea6a8e43e35';
+        const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=sp`;
+        const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+        //Fetch para el Weather
+        const response = await fetch(urlWeather);
+        const data = await response.json();
+        setDataWeather(data);
+        // console.log('weather', data)
+
+        //Fetch para el Forecast
+        const response2 = await fetch(urlForecast);
+        const data2 = await response2.json();
+        setDataForecast(data2);
+        // console.log('forecast', data2)
+        
+      } catch (error) {
+        console.error('Error al obtener datos climáticos:', error);
+      }
+    };
+
+    fetchData();
+  }, [coordinates]);
   
 
   return (
@@ -67,7 +101,9 @@ const SnowReportContextProvider = ({ children }) => {
         DB_PORTUGAL,
         DB_FRANCE,
         DB_ANDORRA,
-        coordinates
+        coordinates,
+        dataForecast,
+        dataWeather
       }}>
       {children}
     </SnowReportContext.Provider>

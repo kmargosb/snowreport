@@ -4,8 +4,15 @@ import snowboarding1 from '@/../public/snowboarding1.jpg'
 import PieHalfDonutChart from './PieHalfDonutChart'
 import TechnicalSheet from './TechnicalSheet'
 import HowToGetThere from './HowToGetThere'
+import Loading from '../loading/Loading'
 
 const Station = ({ stationDB }) => {
+
+  if(!stationDB){
+    return(
+      <Loading/>
+    )
+  }
 
   return (
     <div className='flex flex-col py-20'>
