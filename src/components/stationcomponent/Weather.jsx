@@ -16,9 +16,9 @@ const Weather = ({ stationDB }) => {
     const fetchData = async () => {
       try {
         const address = stationDB?.direccion
-        const googleMapsApiKey = "AIzaSyAzKp5StTGvc7_kydK2MoE_kXhHj2GTDWc"
+        const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY
         const urlGoogleGeo = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${googleMapsApiKey}`
-
+        
         // Fetch para las position
         const response = await fetch(urlGoogleGeo);
         const data = await response.json();
@@ -35,7 +35,7 @@ const Weather = ({ stationDB }) => {
   useEffect(() => {
     if (!position) return;
 
-    const apiKey = process.env.GOOGLE_MAPS_API_KEY
+    const apiKey = "aefa98ee63403acca6298ea6a8e43e35"
     const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lng}&appid=${apiKey}&lang=sp`;
     const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.lat}&lon=${position.lng}&appid=${apiKey}`;
 
