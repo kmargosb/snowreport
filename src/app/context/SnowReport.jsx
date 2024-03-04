@@ -16,7 +16,7 @@ const SnowReportContextProvider = ({ children }) => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('https://snowreport.vercel.app/api/data'); 
+        const response = await fetch('http://localhost:3000/api/data'); 
         const data = await response.json();
         setMySqlData(data);
       } catch (error) {
