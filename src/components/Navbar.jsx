@@ -71,7 +71,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md shadow-primary2">
           <div className="flex flex-col items-center py-4">
-            <Link href="/stations2" className="py-2" onClick={handleCloseMenu}>
+            <Link href="/stations" className="py-2" onClick={handleCloseMenu}>
               Estaciones
             </Link>
             <Link href="/weather" className="py-2" onClick={handleCloseMenu}>

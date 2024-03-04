@@ -5,10 +5,10 @@ import * as echarts from 'echarts';
 
 const PieHalfDonutChart = ({stationDB}) => {
 
-  const green = Number(stationDB?.verdes);
-  const blue = Number(stationDB?.azules);
-  const red = Number(stationDB?.rojas);
-  const black = Number(stationDB?.negras);
+  const green = Number(stationDB?.verdes_totales);
+  const blue = Number(stationDB?.azules_totales);
+  const red = Number(stationDB?.rojas_totales);
+  const black = Number(stationDB?.negras_totales);
 
   useEffect(() => {
     const chart = echarts.init(document.getElementById('pie-half-donut-chart'));

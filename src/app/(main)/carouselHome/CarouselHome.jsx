@@ -2,17 +2,19 @@
 
 import React, { useState, useEffect } from 'react';
 import CarouselPage1 from './CarouselPage1';
-import CarouselPage2 from './CarouselPage2';
+import CarouselPage5 from './CarouselPage5';
+import CarouselPage3 from './CarouselPage3';
+import CarouselPage4 from './CarouselPage4';
 import { LuChevronRightCircle, LuChevronLeftCircle } from "react-icons/lu";
 
 const Carousel = () => {
 
   const components = [
     <CarouselPage1 />,
-    <CarouselPage2 />,
-    'prueba',
-    'otra',
-    'mas prueba',
+    'Aqui falta una',
+    <CarouselPage3/>,
+    <CarouselPage4/>,
+    <CarouselPage5 />
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -45,7 +47,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className='flex overflow-hidden relative lg:min-h[200px] lg:max-h-[500px] lg:max-w-[1280px] mt-[90px] max-sm:w-full max-sm:h-full'
+    <div className='flex overflow-hidden relative lg:max-w-[1280px] mt-[90px] w-full lg:h-[600px]'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <button

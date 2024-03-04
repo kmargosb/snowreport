@@ -14,8 +14,8 @@ const nextConfig = {
                 pathname: '**',
             },
             {
-                protocol: 'https',
-                hostname: 'tile.openweathermap.org',
+                protocol: 'http',
+                hostname: 'openweathermap.org',
                 port: '',
                 pathname: '**',
             }

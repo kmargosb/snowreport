@@ -35,8 +35,8 @@ const CarouselPage1 = () => {
                     loop
                 />
                 {showContent &&
-                    <div className='md:flex md:flex-col md:items-start md:gap-6 md:absolute md:px-0 md:top-60 md:left-24 md:bg-transparent 
-                                    md:py-0 gap-2 flex justify-between px-20 py-2 items-center bg-blue-200 max-sm:px-5'>
+                    <div className='md:flex md:flex-col md:items-start md:gap-6 md:absolute md:px-0 xl:top-96 lg:top-80 md:top-60 left-24 md:bg-transparent 
+                                    md:py-0 gap-2 flex justify-between px-20 py-2 items-center bg-primary max-sm:px-5'>
                         <div className='text-white font-semibold'>
                             <p className=' md:text-7xl font-outline-2 text-5xl max-sm:text-3xl'>Lib Tech</p>
                             <p>Experimental Dream Boards</p>
