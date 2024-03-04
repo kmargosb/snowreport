@@ -8,14 +8,15 @@ const SnowReportContextProvider = ({ children }) => {
 
   const [menuSelected, setMenuSelected] = useState('Estacion')
 
-  // Victor's DataBase mySql
+  // Victor's DataBase mySql  snowreport.vercel.app
+
   
   const [mySqlData, setMySqlData] = useState(null)
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/data');
+        const response = await fetch('http://snowreport.vercel.app/api/data'); 
         const data = await response.json();
         setMySqlData(data);
       } catch (error) {
