@@ -1,6 +1,5 @@
 'use client'
-import dotenv from 'dotenv';
-dotenv.config();
+
 import { useState, useEffect } from 'react'
 import Loading from '../loading/Loading'
 import MediumWidget from '../widgetsWeather/MediumWidget';
@@ -16,7 +15,7 @@ const Weather = ({ stationDB }) => {
     const fetchData = async () => {
       try {
         const address = stationDB?.direccion
-        const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY
+        const googleMapsApiKey = 'AIzaSyAzKp5StTGvc7_kydK2MoE_kXhHj2GTDWc'
         const urlGoogleGeo = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${googleMapsApiKey}`
         
         // Fetch para las position
