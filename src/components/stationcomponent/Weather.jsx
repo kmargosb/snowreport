@@ -65,7 +65,7 @@ const Weather = ({ stationDB }) => {
   }
 
   return (
-    <div className='mt-[90px]'>
+    <div className='mt-[90px] flex justify-center items-center w-full max-sm:w-full'>
       <MediumWidget
         hourlyForecast={dataForecast}
         city={dataWeather.name}

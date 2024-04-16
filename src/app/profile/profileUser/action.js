@@ -1,20 +1,28 @@
 'use server'
 
-import { redirect } from 'next/navigation';
-
 const ActionsCreate = async (formData) => {
-
-    await fetch(`http://localhost:3000/api/users`, {
-        method: "post",
-        body: JSON.stringify({
+    try {
+        const data = {
             name: formData.get('name'),
             lastname: formData.get('lastname'),
+            date: formData.get('date'),
             activities: formData.get('activities'),
             phone: formData.get('phone'),
-            date: formData.get('date'),
+            email: formData.get('email'),
             id: formData.get('id')
-        })
-    })
-    return redirect('/profile')
-}
-export default ActionsCreate
+        };
+        await fetch(`http://localhost:3000/api/users`, {
+            method: "post",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        console.log("Datos enviados correctamente");
+        
+    } catch (error) {
+        console.error("Error al enviar datos:", error);
+    }
+};
+
+export default ActionsCreate;

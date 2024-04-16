@@ -10,7 +10,9 @@ const Station = (params) => {
   const stationDB = DB_SPAIN?.filter(data => data.estacion_id == params.params.id)[0]
 
   return (
-      <StationFull stationDB={stationDB} />
+      <div className=''>
+        <StationFull stationDB={stationDB}/>
+      </div>
   )
 }
 

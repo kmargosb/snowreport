@@ -8,13 +8,13 @@ const StationFull = ({stationDB}) => {
 
   if(!stationDB){
     return(
-      <div className='mt-[100px] w-screen justify-center text-center'>
+      <div className='mt-[100px] justify-center text-center'>
         <Loading/>
       </div>
     )
   }
   return (
-    <div className='w-full mt-[100px] flex flex-col items-center'>
+    <div className='mt-[100px] flex flex-col'>
       <NavbarStation />
       <MenuSelector stationDB={stationDB} />
     </div>

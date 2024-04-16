@@ -10,7 +10,11 @@ export default function Home() {
     <>
       <div className='flex flex-col justify-center items-center gap-10 bg-white'>
         <CarouselHome />
-        <Widget/>
+        <Widget />
+        <div className='flex flex-col my-10'>
+          <div className='text-text-secondary3 text-4xl font-semibold'>Te gusta la adrenalina o prefieres pasear en familia?</div>
+          <p className='text-primary font-semibold text-xl'>Descubre las distintas actividades</p>
+        </div>
         <Activities />
         <BestStations />
       </div>

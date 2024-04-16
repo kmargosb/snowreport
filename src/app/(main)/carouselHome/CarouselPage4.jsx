@@ -12,7 +12,7 @@ const CarouselPage3 = () => {
                     alt="Consejo_de_snowboard"
                     width={2560}
                     height={1436}
-                    className='absolute top-10'
+                    className='absolute top-14'
                 />
             </Link>
         </div>

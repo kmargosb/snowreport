@@ -17,7 +17,7 @@ const Maps = ({ stationDB }) => {
   };
 
   return (
-    <div className='lg:w-[1280px] md:px-20 mt-10'>
+    <div className='w-full lg:px-64 md:px-20 mt-10'>
       <div className="bg-gray-100 border border-gray-300 rounded-lg p-2 mb-4">
       <h2 className="text-xl font-bold mb-2 text-center">Mapa de la Pista</h2>
       <div

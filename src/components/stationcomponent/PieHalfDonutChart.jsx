@@ -66,7 +66,7 @@ const PieHalfDonutChart = ({stationDB}) => {
     };
   }, [stationDB]);
 
-  return <div id="pie-half-donut-chart" style={{ width: '300px', height: '400px' }} />;
+  return <div id="pie-half-donut-chart" className='md:w-[300px] md:h-[400px]' />;
 };
 
 export default PieHalfDonutChart;

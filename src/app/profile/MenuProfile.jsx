@@ -81,11 +81,11 @@ const Profile = () => {
 };
 
 const FavoritesComponent = () => {
-  return <div>Componente de Favoritos</div>;
+  return <div className='pl-20'>Comming Soon</div>;
 };
 
 const HistoryComponent = () => {
-  return <div>Componente de Historial</div>;
+  return <div className='pl-20'>Comming Soon</div>;
 };
 
 export default Profile;

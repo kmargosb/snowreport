@@ -1,12 +1,14 @@
 'use client'
 
 import React, { createContext, useState, useEffect } from 'react'
-
 export const SnowReportContext = createContext(null);
 
 const SnowReportContextProvider = ({ children }) => {
-
+  //Menu selector station
   const [menuSelected, setMenuSelected] = useState('Estacion')
+
+  //Menu selector activities
+  const [menuActivities, setMenuActivities] = useState(null)
 
   // Victor's DataBase mySql  snowreport.vercel.app
 
@@ -16,7 +18,7 @@ const SnowReportContextProvider = ({ children }) => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('https://snowreport.vercel.app/api/data'); 
+        const response = await fetch('http://localhost:3000/api/data'); 
         const data = await response.json();
         setMySqlData(data);
       } catch (error) {
@@ -36,7 +38,7 @@ const SnowReportContextProvider = ({ children }) => {
 
   // Geolocalization
 
-  const [coordinates, setCoordinates] = useState(null);
+  const [coordinates, setCoordinates] = useState({latitud:40.402944, longitud:-3.653632});
 
 
   useEffect(() => {
@@ -47,6 +49,7 @@ const SnowReportContextProvider = ({ children }) => {
           const longitud = position.coords.longitude;
           const altitud = position.coords.altitude;
           setCoordinates({ latitud, longitud, altitud });
+          console.log(latitud, longitud)
         }, (error) => {
           console.error('Error al obtener la ubicación:', error);
         });
@@ -90,6 +93,8 @@ const SnowReportContextProvider = ({ children }) => {
 
     fetchData();
   }, [coordinates]);
+
+  
   
 
   return (
@@ -97,6 +102,8 @@ const SnowReportContextProvider = ({ children }) => {
       value={{
         menuSelected,
         setMenuSelected,
+        menuActivities, 
+        setMenuActivities,
         mySqlData,
         DB_SPAIN,
         DB_PORTUGAL,
@@ -104,7 +111,7 @@ const SnowReportContextProvider = ({ children }) => {
         DB_ANDORRA,
         coordinates,
         dataForecast,
-        dataWeather
+        dataWeather,
       }}>
       {children}
     </SnowReportContext.Provider>

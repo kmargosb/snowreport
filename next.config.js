@@ -18,6 +18,12 @@ const nextConfig = {
                 hostname: 'openweathermap.org',
                 port: '',
                 pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'motor.elpais.com',
+                port: '',
+                pathname: '**'
             }
           ],
     },

@@ -10,26 +10,31 @@ const Activities = () => {
     const info = [
         {
             img: snowParks,
-            tittle: 'SNOWPARKS'
+            tittle: 'SNOWPARKS',
+            id: 'snowparks'
         },
         {
             img: skiMountain,
-            tittle: 'ESQUI DE MONTANA'
+            tittle: 'ESQUI DE MONTANA',
+            id: 'mountainskiing'
         },
         {
             img: raquetasNieve,
-            tittle: 'RAQUETAS'
+            tittle: 'RAQUETAS',
+            id: 'snowshoes'
+
         },
         {
             img: trineoNieve,
-            tittle: 'PISTAS DE TRINEO'
+            tittle: 'PISTAS DE TRINEO',
+            id: 'snowsled'
         }
     ]
     return (
         <div className='w-full flex flex-wrap justify-center gap-6 md:gap-10'>
             {info.map((data, i) => {
                 return (
-                    <Link href="/activitiestable">
+                    <Link href={`stations/${data.id}`}>
                         <Cards key={i} tittle={data.tittle} img={data.img} />
                     </Link>
                 )

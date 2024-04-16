@@ -2,20 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { FaUserCircle, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
 import { TbSnowflake } from "react-icons/tb";
 
-
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-
       const offset = window.scrollY;
-
       offset > 70 ? setScrolled(true) : setScrolled(false);
     };
 
@@ -29,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 z-50 w-full bg-white shadow-md shadow-primary2 flex justify-between items-center px-10 py-2 transition-all  ${scrolled && 'py-1'}`}>
+    <nav className={`fixed top-0 z-50 w-full bg-white shadow-md shadow-primary2 flex gap-4 justify-between items-center px-10 py-2 transition-all  ${scrolled && 'py-1'}`}>
       <div>
         {!scrolled ? (
           <Link href="/" className='flex flex-col justify-center items-center ' onClick={handleCloseMenu}>
@@ -42,21 +40,18 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <div className={`hidden md:flex gap-3 ${scrolled && 'gap-2'} text-text-secondary3`}>
+      <div className={`hidden md:flex gap-3 ${scrolled && 'gap-2'} text-text-secondary3 ml-auto`}>
         <Link href="/stations" onClick={handleCloseMenu}>
-          <p className='hover:text-primary2 transition-all duration-800'>Estaciones</p>
+          <p className={`hover:text-primary2 transition-all duration-800 ${pathname === '/stations' ? 'text-primary2' : ''}`}>Estaciones</p>
         </Link>
         <Link href="/weather" onClick={handleCloseMenu}>
-          <p className='hover:text-primary2 transition-all duration-800'>Tiempo</p>
-        </Link>
-        <Link href="/blog" onClick={handleCloseMenu}>
-          <p className='hover:text-primary2 transition-all duration-800'>Blog</p>
+          <p className={`hover:text-primary2 transition-all duration-800 ${pathname === '/weather' ? 'text-primary2' : ''}`}>Tiempo</p>
         </Link>
       </div>
       <div className={`hidden md:flex gap-4 ${scrolled && 'gap-2'}`}>
-        <Link href='/favorites' onClick={handleCloseMenu}>
+        {/* <Link href='/favorites' onClick={handleCloseMenu}>
           <FaRegHeart className='size-6 text-text-secondary3 hover:text-primary2' />
-        </Link>
+        </Link> */}
         <Link href='/profile' onClick={handleCloseMenu}>
           <FaUserCircle className='size-6 text-text-secondary3 hover:text-primary2' />
         </Link>
@@ -77,12 +72,9 @@ const Navbar = () => {
             <Link href="/weather" className="py-2" onClick={handleCloseMenu}>
               Tiempo
             </Link>
-            <Link href="/blog" className="py-2" onClick={handleCloseMenu}>
-              Blog
-            </Link>
-            <Link href='/favorites' className="py-2" onClick={handleCloseMenu}>
+            {/* <Link href='/favorites' className="py-2" onClick={handleCloseMenu}>
               Favoritos
-            </Link>
+            </Link> */}
             <Link href='/profile' className="py-2" onClick={handleCloseMenu}>
               Perfil
             </Link>

@@ -62,6 +62,7 @@ async function handleEmailAndPassword(email, password) {
         };
 
         cookies().set(options);
+        console.log(user,options)
         return NextResponse.json({ user, options }, { status: 200 });
       }
     }

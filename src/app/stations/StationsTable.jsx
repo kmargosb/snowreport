@@ -33,7 +33,7 @@ const StationsTable = ({ data, country }) => {
       },
       {
         header: "Kilometros",
-        accessorKey: "kilometros"
+        accessorKey: "kilometros_abiertos" 
       },
       {
         header: "Estado",

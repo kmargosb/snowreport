@@ -18,6 +18,7 @@ const MediumWidget = ({ city, country, temp, tempMax, tempMin, description, hour
    }
 
    const firstForecast = hourlyForecast.list.slice(0, 13);
+   console.log(firstForecast)
 
    return (
       <div className="bg-gradient-to-b from-primary to-primary2 max-w-1280 p-8 flex flex-col gap-8 items-center rounded-xl text-white">

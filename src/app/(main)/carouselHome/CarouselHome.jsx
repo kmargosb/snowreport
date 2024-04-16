@@ -6,14 +6,15 @@ import CarouselPage5 from './CarouselPage5';
 import CarouselPage3 from './CarouselPage3';
 import CarouselPage4 from './CarouselPage4';
 import { LuChevronRightCircle, LuChevronLeftCircle } from "react-icons/lu";
+import CarouselPage2 from './CarouselPage2';
 
 const Carousel = () => {
 
   const components = [
     <CarouselPage1 />,
-    'Aqui falta una',
-    <CarouselPage3/>,
-    <CarouselPage4/>,
+    <CarouselPage2 />,
+    <CarouselPage3 />,
+    <CarouselPage4 />,
     <CarouselPage5 />
   ]
 
@@ -53,7 +54,7 @@ const Carousel = () => {
       <button
         onClick={prevSlide}
         className='max-sm:top-20 left-5 size-10 absolute top-2/4 translate-y-2/4 cursor-pointer text-2xl z-[1] opacity-25 hover:opacity-50 focus:outline-none transition-all'>
-       <LuChevronLeftCircle />
+        <LuChevronLeftCircle />
       </button>
       {[...Array(5)].map((_, index) => (
         <div
@@ -68,7 +69,7 @@ const Carousel = () => {
       <button
         onClick={nextSlide}
         className='max-sm:top-20 right-1 size-10 absolute top-2/4 translate-y-2/4 cursor-pointer text-2xl z-[1] opacity-25 hover:opacity-50 focus:outline-none transition-all'>
-        <LuChevronRightCircle/>
+        <LuChevronRightCircle />
       </button>
     </div>
   );
